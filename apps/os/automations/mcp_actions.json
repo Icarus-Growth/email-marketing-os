@@ -1,0 +1,208 @@
+{
+  "_about": "The AI connector's actions for this agency type (apps/os/automations/mcp_server.py). 'actions' is the full list the connector offers; each board says which column is its name, its stages in order, who works on it, the one 'work link' column and the columns cards.update may change. Stage names must be spelled exactly as in the database; the tests check them. 'documents' on a board and 'client_documents' name the long texts that docs.read and docs.write open: the field key (the same in the app and the database), its label, and the old link column kept for 'paste a link instead'.",
+  "actions": [
+    "my_queue",
+    "urgent",
+    "boards",
+    "cards.search",
+    "cards.get",
+    "docs.read",
+    "clients.get",
+    "team",
+    "calls.get",
+    "forms.get",
+    "metrics.get",
+    "brain.index",
+    "brain.map",
+    "brain.search",
+    "brain.read",
+    "cards.create",
+    "cards.move",
+    "cards.update",
+    "cards.note",
+    "docs.write",
+    "calls.add",
+    "metrics.add",
+    "clients.update",
+    "emails.tick"
+  ],
+  "boards": {
+    "tasks": {
+      "name": "task_name",
+      "stages": [
+        "-1 - Rejected",
+        "0 - Backlog",
+        "9 - Blocked",
+        "10 - In Progress",
+        "29 - Amendments",
+        "30 - In Review",
+        "100 - Complete"
+      ],
+      "people": [
+        "assignee_id",
+        "reviewer_id"
+      ],
+      "work_link": "links",
+      "fields": [
+        "due_date",
+        "notes",
+        "links"
+      ],
+      "created_by": "created_by_id"
+    },
+    "flows": {
+      "name": "flow_name",
+      "stages": [
+        "0 - Backlog",
+        "10 - Brief In Progress",
+        "19 - Brief Amendments",
+        "20 - Copy",
+        "30 - Design",
+        "39 - Design Amendments",
+        "40 - Design QA",
+        "50 - Build In Email Platform",
+        "60 - Live"
+      ],
+      "people": [
+        "assignee_id",
+        "reviewer_id"
+      ],
+      "work_link": "design_url",
+      "fields": [
+        "due_date",
+        "notes",
+        "brief_url",
+        "copy_doc_url",
+        "design_url",
+        "feedback_notes"
+      ],
+      "items": {
+        "table": "emails",
+        "key": "flow_id",
+        "order": "position"
+      },
+      "documents": {
+        "brief": {
+          "label": "Brief",
+          "link": "brief_url"
+        },
+        "copy_doc": {
+          "label": "Copy",
+          "link": "copy_doc_url"
+        }
+      }
+    },
+    "campaign_calendars": {
+      "name": "calendar_name",
+      "stages": [
+        "0 - Backlog",
+        "10 - Calendar In Progress",
+        "19 - Calendar Amendments",
+        "20 - Copy",
+        "30 - Design",
+        "39 - Design Amendments",
+        "40 - Design QA",
+        "50 - Build In Email Platform",
+        "60 - Scheduled",
+        "100 - Done"
+      ],
+      "people": [
+        "assignee_id",
+        "reviewer_id"
+      ],
+      "work_link": "calendar_url",
+      "fields": [
+        "due_date",
+        "notes",
+        "calendar_url",
+        "copy_doc_url",
+        "design_url",
+        "feedback_notes"
+      ],
+      "items": {
+        "table": "emails",
+        "key": "calendar_id",
+        "order": "position"
+      },
+      "documents": {
+        "copy_doc": {
+          "label": "Copy",
+          "link": "copy_doc_url"
+        }
+      }
+    }
+  },
+  "client_stages": [
+    "0 - Paid",
+    "10 - Contract Sent",
+    "20 - Contract Signed",
+    "30 - Set-Up",
+    "40 - Call Booked",
+    "50 - Call Taken",
+    "100 - Onboarded"
+  ],
+  "client_fields": [
+    "client_name",
+    "status",
+    "website",
+    "contact_name",
+    "contact_email",
+    "contact_phone",
+    "start_date",
+    "end_date",
+    "services",
+    "onboarding_stage",
+    "account_manager_id",
+    "drive_folder_url",
+    "notes",
+    "copywriter_id",
+    "designer_id",
+    "builder_id",
+    "store_url",
+    "email_platform",
+    "platform_access",
+    "research_doc_url",
+    "brand_assets_url"
+  ],
+  "client_documents": {
+    "research_doc": {
+      "label": "Research doc",
+      "link": "research_doc_url"
+    }
+  },
+  "call_types": [
+    "Sales",
+    "Onboarding",
+    "Check-In",
+    "Internal",
+    "Other"
+  ],
+  "metrics": {
+    "daily": [
+      "attributed_revenue",
+      "emails_delivered",
+      "opens",
+      "clicks",
+      "placed_orders",
+      "list_size",
+      "source"
+    ],
+    "weekly": [
+      "attributed_revenue",
+      "emails_delivered",
+      "opens",
+      "clicks",
+      "placed_orders",
+      "list_size",
+      "note"
+    ]
+  },
+  "emails": {
+    "statuses": [
+      "To Write",
+      "Copy Done",
+      "Designed",
+      "Built"
+    ]
+  }
+}

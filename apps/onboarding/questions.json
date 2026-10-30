@@ -1,0 +1,291 @@
+{
+  "form_key": "onboarding",
+  "form_version": "email-marketing-v1",
+  "title": "Client onboarding",
+  "intro": {
+    "minutes": 15,
+    "bring": [
+      "Your store address",
+      "Your best-selling products",
+      "Your active discount codes",
+      "Access to Klaviyo and to your store"
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "title": "Your details",
+      "blurb": "Who you are and how we reach you."
+    },
+    {
+      "step": 2,
+      "title": "Your store",
+      "blurb": "What you sell, and who buys it."
+    },
+    {
+      "step": 3,
+      "title": "Your marketing",
+      "blurb": "What has worked, who you compete with, and your offers."
+    },
+    {
+      "step": 4,
+      "title": "Klaviyo and access",
+      "blurb": "The accounts we need. If something is not done yet, choose Not yet. We will do it with you on the call."
+    },
+    {
+      "step": 5,
+      "title": "Goals",
+      "blurb": "What good looks like for you."
+    },
+    {
+      "step": 6,
+      "title": "Review",
+      "blurb": "Check your answers. Nothing is sent until you press Submit."
+    }
+  ],
+  "flow": [
+    {
+      "step": 1,
+      "id": "full_name",
+      "label": "Your name",
+      "type": "short_text",
+      "required": true,
+      "placeholder": "e.g. Sam Taylor",
+      "prefill": "name"
+    },
+    {
+      "step": 1,
+      "id": "email",
+      "label": "Your email",
+      "type": "email",
+      "required": true,
+      "placeholder": "e.g. sam@example.com",
+      "prefill": "email",
+      "help": "We send updates about your account to this address."
+    },
+    {
+      "step": 1,
+      "id": "phone",
+      "label": "Best phone number for business",
+      "type": "short_text",
+      "required": false,
+      "placeholder": "e.g. +1 555 010 0100",
+      "prefill": "phone"
+    },
+    {
+      "step": 1,
+      "id": "company_name",
+      "label": "Company name",
+      "type": "short_text",
+      "required": true,
+      "placeholder": "e.g. Example Co",
+      "prefill": "company"
+    },
+    {
+      "step": 1,
+      "id": "website",
+      "label": "Company website",
+      "type": "url",
+      "required": true,
+      "placeholder": "e.g. example.com",
+      "none_option": {
+        "label": "We do not have a website yet",
+        "value": "No website yet"
+      }
+    },
+    {
+      "step": 1,
+      "id": "team_contacts",
+      "label": "Who else on your team should we talk to?",
+      "type": "long_text",
+      "required": false,
+      "rows": 3,
+      "help": "Name, job title and email for each person. Put each person on a new line.",
+      "placeholder": "e.g. Alex Kim, Head of Sales, alex@example.com"
+    },
+    {
+      "step": 2,
+      "id": "store_platform",
+      "label": "Which platform is your store on?",
+      "type": "single_select",
+      "required": true,
+      "options": [
+        "Shopify",
+        "WooCommerce",
+        "BigCommerce",
+        "Other"
+      ]
+    },
+    {
+      "step": 2,
+      "id": "best_sellers",
+      "label": "Your best-selling products",
+      "type": "long_text",
+      "required": true,
+      "help": "Names or links. Tell us which ones you want to sell more of."
+    },
+    {
+      "step": 2,
+      "id": "audience",
+      "label": "Who buys from you?",
+      "type": "long_text",
+      "required": true,
+      "rows": 5,
+      "help": "Age, interests, why they buy, and what makes them come back."
+    },
+    {
+      "step": 2,
+      "id": "brand_voice",
+      "label": "How does your brand talk?",
+      "type": "long_text",
+      "required": true,
+      "help": "For example: warm and funny, or calm and expert. Links to emails or posts you like help a lot."
+    },
+    {
+      "step": 3,
+      "id": "winning_angles",
+      "label": "What messages or offers have worked best for you?",
+      "type": "long_text",
+      "required": false
+    },
+    {
+      "step": 3,
+      "id": "competitors",
+      "label": "Who are your main competitors?",
+      "type": "long_text",
+      "required": true,
+      "help": "Names or website addresses."
+    },
+    {
+      "step": 3,
+      "id": "discount_codes",
+      "label": "Your active discount codes, and when to use them",
+      "type": "long_text",
+      "required": false
+    },
+    {
+      "step": 3,
+      "id": "ads_link",
+      "label": "Link to your Facebook page or your ads",
+      "type": "url",
+      "required": false,
+      "none_option": {
+        "label": "We do not run ads",
+        "value": "No ads"
+      }
+    },
+    {
+      "step": 3,
+      "id": "list_size",
+      "label": "Roughly how many people are on your email list?",
+      "type": "short_text",
+      "required": false
+    },
+    {
+      "step": 3,
+      "id": "sms",
+      "label": "Do you want SMS as well as email?",
+      "type": "single_select",
+      "required": true,
+      "options": [
+        "Yes",
+        "No",
+        "Not yet, maybe later"
+      ]
+    },
+    {
+      "step": 4,
+      "id": "has_klaviyo",
+      "label": "Do you have a Klaviyo account?",
+      "type": "single_select",
+      "required": true,
+      "options": [
+        "Yes",
+        "No, please set one up for us"
+      ]
+    },
+    {
+      "step": 4,
+      "id": "access_klaviyo",
+      "label": "Invite us to your Klaviyo account as an Admin user",
+      "type": "checkbox",
+      "required": false,
+      "show_if": {
+        "question": "has_klaviyo",
+        "equals": "Yes"
+      },
+      "help": "In Klaviyo: Settings, then Users, then Add new user. Use the email address in our welcome message."
+    },
+    {
+      "step": 4,
+      "id": "access_store",
+      "label": "Add us as a staff member in your store",
+      "type": "checkbox",
+      "required": false,
+      "help": "This lets us add sign-up forms and check the sending domain."
+    },
+    {
+      "step": 4,
+      "id": "sending_domain",
+      "label": "Is your sending domain set up in Klaviyo?",
+      "type": "single_select",
+      "required": true,
+      "options": [
+        "Yes",
+        "No",
+        "Not sure"
+      ]
+    },
+    {
+      "step": 4,
+      "id": "access_notes",
+      "label": "Is there any access you cannot give us yet?",
+      "type": "long_text",
+      "required": false,
+      "help": "Tell us what it is and why. For example, the login belongs to someone who is away. We will sort it out with you on the onboarding call."
+    },
+    {
+      "step": 5,
+      "id": "goal_90_days",
+      "label": "What would make the first 90 days a success for you?",
+      "type": "long_text",
+      "required": true,
+      "help": "For example, a share of store sales from email, or a bigger list."
+    },
+    {
+      "step": 5,
+      "id": "worries",
+      "label": "Is there anything you are worried about?",
+      "type": "long_text",
+      "required": false,
+      "help": "For example, something that went wrong with an agency before. We would rather know now."
+    },
+    {
+      "step": 5,
+      "id": "anything_else",
+      "label": "Anything else we should know before the onboarding call?",
+      "type": "long_text",
+      "required": false
+    }
+  ],
+  "done": {
+    "heading": "That's everything. Thank you.",
+    "blurb": "Your answers are in. We read them before your onboarding call, so the call starts with your business and not with questions you have already answered.",
+    "next": {
+      "heading": "What happens next",
+      "items": [
+        "We read your answers and prepare for the onboarding call.",
+        "On the call we check Klaviyo access together and go through any answer you were not sure about.",
+        "Then we build your first flows, starting with the welcome and abandoned cart emails."
+      ]
+    },
+    "links": [
+      {
+        "heading": "Book your onboarding call",
+        "body": "Choose a time that suits you.",
+        "cta": "Book the call",
+        "url": ""
+      }
+    ]
+  }
+}
