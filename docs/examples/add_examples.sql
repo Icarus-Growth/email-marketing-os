@@ -52,7 +52,8 @@ where is_example;
 insert into public.flows (id, flow_name, client_id, flow_type, stage, assignee_id, reviewer_id, due_date, is_example) values
   ('ffffffff-0000-4000-8000-000000000001', 'Example: welcome flow',        'cccccccc-0000-4000-8000-000000000001', 'Welcome',        '60 - Live',             'aaaaaaaa-0000-4000-8000-000000000002', 'aaaaaaaa-0000-4000-8000-000000000001', current_date - 20, true),
   ('ffffffff-0000-4000-8000-000000000002', 'Example: abandoned cart flow', 'cccccccc-0000-4000-8000-000000000001', 'Abandoned Cart', '30 - Design',           'aaaaaaaa-0000-4000-8000-000000000003', 'aaaaaaaa-0000-4000-8000-000000000001', current_date + 2,  true),
-  ('ffffffff-0000-4000-8000-000000000003', 'Example: post-purchase flow',  'cccccccc-0000-4000-8000-000000000002', 'Post-Purchase',  '39 - Design Amendments','aaaaaaaa-0000-4000-8000-000000000003', 'aaaaaaaa-0000-4000-8000-000000000001', current_date - 1,  true);
+  ('ffffffff-0000-4000-8000-000000000003', 'Example: post-purchase flow',  'cccccccc-0000-4000-8000-000000000002', 'Post-Purchase',  '39 - Design Amendments','aaaaaaaa-0000-4000-8000-000000000003', 'aaaaaaaa-0000-4000-8000-000000000001', current_date - 1,  true),
+  ('ffffffff-0000-4000-8000-000000000004', 'Example: old welcome flow',    'cccccccc-0000-4000-8000-000000000002', 'Welcome',        '100 - Retired',         'aaaaaaaa-0000-4000-8000-000000000002', 'aaaaaaaa-0000-4000-8000-000000000001', current_date - 90, true);
 
 insert into public.campaign_calendars (id, calendar_name, client_id, calendar_month, stage, assignee_id, reviewer_id, due_date, is_example) values
   ('eeeeeeee-0000-4000-8000-000000000001', 'Example: next month''s calendar', 'cccccccc-0000-4000-8000-000000000001',
