@@ -17,6 +17,7 @@ export const LADDERS = {
     '40 - Design QA',
     '50 - Build In Email Platform',
     '60 - Live',
+    '100 - Retired',
   ],
   calendar_stage: [
     '0 - Backlog',
@@ -45,12 +46,13 @@ export const AGENCY: AgencyConfig = {
       table: 'flows',
       label: 'Flows',
       item: 'flow',
-      desc: 'One card is one flow for one client, from brief to live. A live flow stays open. Its emails are a checklist inside the card.',
+      desc: 'One card is one flow for one client, from brief to live. A live flow runs on its own: it stays on this board but not on My Work, and is never late or stuck. A flow that is switched off or replaced moves to "100 - Retired". Its emails are a checklist inside the card.',
       nameKey: 'flow_name',
       stageKey: 'stage',
       ladder: 'flow_stage',
-      closed: [],
+      closed: ['100 - Retired'],
       live: ['60 - Live'],
+      liveOnMyWork: false,
       clientRequired: true,
       card: ['client_id', 'assignee_id', 'due_date'],
       sections: [

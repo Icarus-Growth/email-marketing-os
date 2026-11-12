@@ -67,7 +67,8 @@
         "39 - Design Amendments",
         "40 - Design QA",
         "50 - Build In Email Platform",
-        "60 - Live"
+        "60 - Live",
+        "100 - Retired"
       ],
       "people": [
         "assignee_id",

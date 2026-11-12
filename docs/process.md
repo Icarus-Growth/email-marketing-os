@@ -12,6 +12,8 @@ the sending domain and the sign-up forms. Then a research document on the brand.
 ## 2. Flows (the Flows board)
 Brief → brief amendments (bounce-back) → copy → design → design amendments (bounce-back) → design QA →
 build in the email platform → live. One card is one flow. Its emails are a checklist inside the card.
+A live flow runs on its own. It stays on the Flows board but leaves My Work, and it is never late or stuck.
+A flow that is switched off or replaced moves to "100 - Retired" (finished).
 
 ## 3. Campaigns (the Campaigns board)
 One card is one client's campaign calendar for one month: the whole batch moves together.

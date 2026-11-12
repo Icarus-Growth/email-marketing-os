@@ -10,7 +10,9 @@
     },
     "flows": {
       "label": "Flows",
-      "final": []
+      "final": [
+        "100 - Retired"
+      ]
     },
     "campaign_calendars": {
       "label": "Campaigns",
