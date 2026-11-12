@@ -10,14 +10,11 @@
     },
     "flows": {
       "label": "Flows",
-      "final": [
-        "60 - Live"
-      ]
+      "final": []
     },
     "campaign_calendars": {
       "label": "Campaigns",
       "final": [
-        "60 - Scheduled",
         "100 - Done"
       ]
     }
